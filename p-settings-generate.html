@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>OneShot "p-settings.dat" Maker by hat_kid</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#200530">
+		<meta property="og:title" content="OneShot p-settings.dat Maker">
+		<meta property="og:description" content="This generates a Regular or Post-Solstice, Beated or Not save file for OneShot, for those who lost their save but want to play OneShot or to mod OneShot: Fading Memory without replaying the base game. Do NOT use if You haven't beaten Solstice yet, since You'd be missing a ton of context.">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="OneShot Save Maker by hat_kid">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:url" content="https://hatkid.is-a.dev/OneShot-SaveMaker/p-settings-generate.html">
+		<meta property="og:image" content="https://hatkid.is-a.dev/OneShot-SaveMaker/static/img/og.png">
+		<meta property="og:image:secure_url" content="https://hatkid.is-a.dev/OneShot-SaveMaker/static/img/og.png">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="627">
+		<meta property="og:image:alt" content="OpenGraph Image of OneShot Save Maker">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" href="static/styles.css">
+		<script src="static/js/p-settings-generate.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<img id="logo" src="static/img/logo.png" alt="OneShot Logo" title="OneShot">
+			<div id="subtitle">p-settings.dat maker&#8482;</div>
+		</div>
+		<div id="message">
+			<h3 id="Notice">Notice</h3>
+			This generates a Regular or Post-Solstice, Beated or Not save file for <b>OneShot</b>, for those who lost their save but want to play OneShot or to mod <a href="https://store.steampowered.com/app/1569440/OneShot_Fading_Memory/" target="_blank">OneShot: Fading Memory</a> without replaying the base game.
+			<br><br>
+			<b>Do NOT use</b> if You haven't beaten Solstice yet, since You'd be missing a ton of context.
+			<br><br>
+			If You want full save, You need fill Your In-Game Name and check all checkboxes.
+			<br><br>
+			Also, You may consider replaying the base game with OneShot: Fading Memory installed anyway, since there are subtle easter eggs you might find.
+			<br><br>
+			Also It's recreation of <a href="https://solsticesavegen.rkevin.dev/" target="_blank">rkevin's Post-Solstice save maker</a>, recreated by <a href="https://github.com/thehatkid" target="_blank">hat_kid</a>.
+		</div>
+		<div id="box">
+			<h3 id="PlayerName">Player's Name</h3>
+			<table cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+					<tr>
+						<td>In-Game Name</td>
+						<td><input id="i_ign" placeholder="PLAYER" required="true" type="text"></td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 id="Switches">Switches</h3>
+			<table cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+					<tr>
+						<td>Beat Solstice</td>
+						<td><input id="s_beatsolstice" type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Beat the Game once</td>
+						<td><input id="s_beated" type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Smashed Lightbulb once</td>
+						<td><input id="s_smashed" type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Saved World once</td>
+						<td><input id="s_saved" type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Talked to Rue first time</td>
+						<td><input id="s_talkedtorue" type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Known Rue's Name</td>
+						<td><input id="s_knowruename" type="checkbox"></td>
+					</tr>
+					<tr>
+						<td>Picked Memory at Title</td>
+						<td><input id="s_pickedmemory" type="checkbox"></td>
+					</tr>
+				</tbody>
+			</table>
+			<input id="generate" type="button" value="Generate!" onclick="generate()">
+		</div>
+		<div id="footer">
+			made and design by <a href="https://github.com/thehatkid" target="_blank">hat_kid</a> | <a href="https://github.com/thehatkid/OneShot-SaveMaker" target="_blank">GitHub Repository</a>
+		</div>
+	</body>
+</html>
