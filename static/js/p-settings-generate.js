@@ -20,6 +20,12 @@ function hexToBytes(str) {
 	return new Uint8Array(a);
 }
 
+function bytesToHex(byteArray) {
+	return Array.from(byteArray, function(byte) {
+		return ('0' + (byte & 0xFF).toString(16)).slice(-2);
+	}).join('')
+}
+
 String.prototype.hexEncode = function() {
     var hex;
 
@@ -32,9 +38,14 @@ String.prototype.hexEncode = function() {
     return result;
 }
 
+String.prototype.toUTF8Bytes = function() {
+	return new TextEncoder().encode(this.toString());
+}
+
 function generate() {
 	var hexstring = '';
 	let i_ign = document.getElementById('i_ign').value;
+	let ign_bytes = i_ign.toUTF8Bytes();
 
 	// Inputs validation
 	if (i_ign.length == 0) {
@@ -135,10 +146,10 @@ function generate() {
 	hexstring += MARSHAL_VERSION[0] + MARSHAL_VERSION[1];
 
 	// Declarate IVAR and String with length
-	hexstring += MARSHAL_IVAR + MARSHAL_STRING + String.fromCharCode(5 + i_ign.length).hexEncode();
+	hexstring += MARSHAL_IVAR + MARSHAL_STRING + String.fromCharCode(5 + ign_bytes.length).hexEncode();
 
 	// Putting In-Game Player Name to String
-	hexstring += i_ign.hexEncode();
+	hexstring += bytesToHex(ign_bytes);
 
 	hexstring += '063a064554'; // file ending
 
