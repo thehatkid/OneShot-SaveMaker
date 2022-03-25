@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Terminus;
+    src: url("terminus.ttf");
+}
+
+body {
+    margin: 0;
+    background: #200530;
+    color: #f0c0f0;
+    font-family: Terminus;
+    font-size: 16pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 32px 0;
+    color: #fa9040;
+    font-weight: unset;
+    font-size: 26pt;
+    text-align: center;
+    text-shadow: 0px 0px 4px #fa7060;
+}
+
+a {
+    color: #f060f0;
+}
+
+#header {
+    margin: 32px 0;
+    text-align: center;
+}
+
+#header img {
+    max-width: 100%;
+}
+
+#header #subtitle {
+    margin-top: -20px;
+    color: #fa9040;
+    font-size: 26pt;
+    text-shadow: 0px 0px 4px #fa7060;
+}
+
+#message {
+    width: 628px;
+    margin: 8px auto 64px auto;
+    padding: 16px 32px;
+    border: 4px solid #fa9040;
+    color: white;
+    background: rgba(48, 48, 24, 0.5);
+    box-shadow: 0px 0px 6px 2px #fa9040, #fa9040 0px 0px 32px inset;
+}
+
+#box {
+    width: 628px;
+    margin: 32px auto;
+    padding: 16px 32px;
+    border: 4px solid #401560;
+    background: rgba(32, 24, 48, 0.5);
+    box-shadow: 0px 0px 6px 2px #400080, #400080 0px 0px 32px inset;
+}
+
+#box input[type=text] {
+    padding: 4px;
+    border: 0;
+    border-bottom: 2px solid #5a2a7a;
+    width: 100%;
+    color: white;
+    background: #4000a0;
+    box-shadow: 0px 0px 4px 2px #2a006a;
+}
+
+#box input[type=button] {
+    display: block;
+    margin: 32px auto;
+    width: 200px !important;
+    padding: 8px;
+    border: 0;
+    border-bottom: 8px solid #603010;
+    color: white;
+    text-align: center;
+    background: #ba6a30;
+    font-family: Terminus;
+    font-size: 16pt;
+}
+
+#box input[type=button]:active {
+    border-bottom: 2px solid #603010;
+    margin-top: 38px;
+}
+
+#box input[type=button]:disabled {
+    opacity: 0.5;
+}
+
+#box table {
+    width: 100%;
+}
+
+#box tbody td {
+    padding: 4px 0;
+    width: 50%;
+}
+
+#footer {
+    margin: 64px 0px;
+    color: gray;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    #message {
+        border-left: 0;
+        border-right: 0;
+        width: auto;
+    }
+
+    #box {
+        border-left: 0;
+        border-right: 0;
+        width: auto;
+    }
+}
