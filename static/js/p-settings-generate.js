@@ -49,7 +49,10 @@ function generate() {
 
 	// Inputs validation
 	if (i_ign.length == 0) {
-		alert('Please enter the In-Game Player Name!');
+		alert('Please enter the Player Name!');
+		return false;
+	} else if (ign_bytes.length > 255) {
+		alert('Please enter the Player Name less than 256 characters!');
 		return false;
 	}
 
@@ -145,8 +148,11 @@ function generate() {
 	// Putting last Marshal object (In-Game Player Name)
 	hexstring += MARSHAL_VERSION[0] + MARSHAL_VERSION[1];
 
-	// Declarate IVAR and String with length
-	hexstring += MARSHAL_IVAR + MARSHAL_STRING + String.fromCharCode(5 + ign_bytes.length).hexEncode();
+	// Declarate IVAR with String type
+	hexstring += MARSHAL_IVAR + MARSHAL_STRING;
+
+	// Set IVAR String length
+	hexstring += String.fromCharCode(5 + ign_bytes.length).hexEncode();
 
 	// Putting In-Game Player Name to String
 	hexstring += bytesToHex(ign_bytes);
